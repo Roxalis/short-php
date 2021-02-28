@@ -22,7 +22,7 @@ function Xtodecimal($string, $type){
 			$count += 1;
 
 		}
-	
+		
 		return $result;
 	}
 

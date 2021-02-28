@@ -1,34 +1,34 @@
 <?php
 
 
-function decimaltoX($zahl, $basis){
+function decimaltoX($num, $basis){
 
 	if($basis == 2){
 
-		echo "Die binäre Zahl ist: ";
+		echo "The binary number is: ";
 
-		if ($zahl == 0){
+		if ($num == 0){
 
-		echo 0;
+			echo 0;
 
 
 		} else {
 
 			$a = array();
 
-			while ($zahl > 0){
+			while ($num > 0){
 
-    			$rest = $zahl % 2;
-    			array_push($a, $rest);
-    			$zahl = intdiv($zahl, 2);
-    
+				$rest = $num % 2;
+				array_push($a, $rest);
+				$num = intdiv($num, 2);
+
 			}
 
 			$a = array_reverse($a);
 
 			for ($x = 0; $x < sizeof($a); $x++){
 
-			echo $a[$x];
+				echo $a[$x];
 
 			}	
 
@@ -37,117 +37,123 @@ function decimaltoX($zahl, $basis){
 
 	if($basis == 16){
 
-		echo "Die Hexadezimalzahl ist: ";
+		echo "The hexadecimal number is: ";
 
-		if ($zahl < 16){
+		if ($num < 16){
 
-		if ($zahl < 10){
+			if ($num < 10){
 
-		echo $zahl;
+				echo $num;
 
-		} else {
+			} else {
 
-		if ($zahl == 10){
+				if ($num == 10){
 
-		echo "A";
+					echo "A";
 
-		} else {
+				} else {
 
-		if ($zahl == 11){
+					if ($num == 11){
 
-		echo "B";
+						echo "B";
 
-		} else {
+					} else {
 
-		if ($zahl == 12){
+						if ($num == 12){
 
-		echo "C";
+							echo "C";
 
-		} else {
+						} else {
 
-		if ($zahl == 13){
+							if ($num == 13){
 
-		echo "D";
+								echo "D";
 
-		} else {
+							} else {
 
-		if ($zahl == 14){
+								if ($num == 14){
 
-		echo "E";
+									echo "E";
 
-		} else {
+								} else {
 
-		if ($zahl == 15){
+									if ($num == 15){
 
-		echo "F";
+										echo "F";
 
-		}}}}}}}
+									}}}}}}}
 
-		} else {
+								} else {
 
 
-		$a = array();
+									$a = array();
 
-		while ($zahl > 0){
+									while ($num > 0){
 
-    		$rest = $zahl % 16;
-    		array_push($a, $rest);
-    		$zahl = intdiv($zahl, 16);
-    
-		}
+										$rest = $num % 16;
+										array_push($a, $rest);
+										$num = intdiv($num, 16);
 
-		$a = array_reverse($a);
+									}
 
-		for ($x = 0; $x < sizeof($a); $x++){
+									$a = array_reverse($a);
 
-		if ($a[$x] < 10){
+									for ($x = 0; $x < sizeof($a); $x++){
 
-		echo $a[$x];
+										if ($a[$x] < 10){
 
-		} else {
+											echo $a[$x];
 
-		if ($a[$x] == 10){
+										} else {
 
-		echo "A";
+											if ($a[$x] == 10){
 
-		} else {
+												echo "A";
 
-		if ($a[$x] == 11){
+											} else {
 
-			echo "B";
+												if ($a[$x] == 11){
 
-		} else {
+													echo "B";
 
-		if ($a[$x] == 12){
+												} else {
 
-			echo "C";
+													if ($a[$x] == 12){
 
-		} else {
+														echo "C";
 
-		if ($a[$x] == 13){
+													} else {
 
-			echo "D";
+														if ($a[$x] == 13){
 
-		} else {
+															echo "D";
 
-		if ($a[$x] == 14){
+														} else {
 
-			echo "E";
+															if ($a[$x] == 14){
 
-		} else {
+																echo "E";
 
-		if ($a[$x] == 15){
+															} else {
 
-			echo "F";
+																if ($a[$x] == 15){
 
-		}}}}}}}
+																	echo "F";
 
-		}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
 
-		}
+									}
 
-	}
+								}
+
+							}
 
 }
 
-?>
+						?>
